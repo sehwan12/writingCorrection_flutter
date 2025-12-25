@@ -2,6 +2,7 @@ import 'package:aiwriting_collection/widget/practice/practice_card.dart';
 import 'package:aiwriting_collection/widget/dialog/mini_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:aiwriting_collection/generated/app_localizations.dart';
+import 'package:aiwriting_collection/screen/statistics/writing_stats_screen.dart';
 
 class RecordScreen extends StatelessWidget {
   const RecordScreen({super.key});
@@ -85,23 +86,14 @@ class RecordScreen extends StatelessWidget {
                 textAlign: TextAlign.left,
               ),
             ),
-
-            // 기능 목록 (카드 형태)
             PracticeCard(
               title: appLocalizations.writingScoreStatsTitle,
               subtitle: appLocalizations.writingScoreStatsSubtitle,
               imagePath: 'assets/image/graph.png',
               onTap: () {
-                // 해당 페이지로 이동하는 로직
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return MiniDialog(
-                      scale: scale,
-                      title: appLocalizations.dialogTitleInProgress,
-                      content: appLocalizations.dialogContentInProgress,
-                    );
-                  },
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const WritingStatsScreen()),
                 );
               },
             ),
@@ -236,16 +228,11 @@ class RecordScreen extends StatelessWidget {
                     subtitle: appLocalizations.writingScoreStatsSubtitle,
                     imagePath: 'assets/image/graph.png',
                     onTap: () {
-                      // 개발진행중이라는 다이얼로그
-                      showDialog(
-                        context: context,
-                        builder: (BuildContext context) {
-                          return MiniDialog(
-                            scale: scale * 1.5,
-                            title: appLocalizations.dialogTitleInProgress,
-                            content: appLocalizations.dialogContentInProgress,
-                          );
-                        },
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => const WritingStatsScreen(),
+                        ),
                       );
                     },
                   ),
