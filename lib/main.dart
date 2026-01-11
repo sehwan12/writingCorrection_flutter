@@ -6,7 +6,7 @@ import 'package:aiwriting_collection/model/common/type_enum.dart';
 import 'package:aiwriting_collection/screen/home/home_screen.dart';
 import 'package:aiwriting_collection/screen/auth/login_screen.dart';
 import 'package:aiwriting_collection/screen/auth/sign_screen.dart';
-import 'package:aiwriting_collection/screen/record_screen.dart';
+import 'package:aiwriting_collection/screen/statistics/record_screen.dart';
 import 'package:aiwriting_collection/screen/free_study/study_screen.dart';
 import 'package:aiwriting_collection/screen/mypage_screen.dart';
 import 'package:aiwriting_collection/widget/common/bottom_bar.dart';
